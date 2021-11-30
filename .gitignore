@@ -1,4 +1,4 @@
-src/
 target/
 **/*.rs.bk
 Cargo.lock
+svd/esp32c3.svd

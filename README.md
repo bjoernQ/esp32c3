@@ -1,5 +1,11 @@
 # esp32c3
 
+## Important:
+
+This fork was created to enable rapid prototyping. SVD patching has been enabled via [svdtools](https://github.com/stm32-rs/svdtools) so that changes can be made to the PAC as needed. As patches accumulate, I will eventually upstream them to the official Espressif SVDs and make the corresponding updates to this repository.
+
+---
+
 [![crates.io](https://img.shields.io/crates/v/esp32c3.svg)](https://crates.io/crates/esp32c3)
 
 A peripheral access crate the ESP32-C3. See the [`svd2rust repo`](https://github.com/rust-embedded/svd2rust) for more infomation on how to use this crate.
@@ -8,9 +14,7 @@ If you find any problems with the SVD please report them upstream to the [espres
 
 Join in on the discussion: https://matrix.to/#/#esp-rs:matrix.org!
 
-
 ## [`Documentation`](https://docs.rs/esp32c3)
-
 
 ## Building
 
