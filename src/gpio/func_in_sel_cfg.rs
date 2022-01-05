@@ -34,28 +34,28 @@ impl From<crate::W<FUNC_IN_SEL_CFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `FUNC_IN_SEL` reader - set this value: s=-53: connect GPIO\\[s\\]
+#[doc = "Field `IN_SEL` reader - set this value: s=-53: connect GPIO\\[s\\]
 to this port. s=x38: set this port always high level. s=x3C: set this port always low level."]
-pub struct FUNC_IN_SEL_R(crate::FieldReader<u8, u8>);
-impl FUNC_IN_SEL_R {
+pub struct IN_SEL_R(crate::FieldReader<u8, u8>);
+impl IN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
-        FUNC_IN_SEL_R(crate::FieldReader::new(bits))
+        IN_SEL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for FUNC_IN_SEL_R {
+impl core::ops::Deref for IN_SEL_R {
     type Target = crate::FieldReader<u8, u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `FUNC_IN_SEL` writer - set this value: s=-53: connect GPIO\\[s\\]
+#[doc = "Field `IN_SEL` writer - set this value: s=-53: connect GPIO\\[s\\]
 to this port. s=x38: set this port always high level. s=x3C: set this port always low level."]
-pub struct FUNC_IN_SEL_W<'a> {
+pub struct IN_SEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> FUNC_IN_SEL_W<'a> {
+impl<'a> IN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -63,26 +63,26 @@ impl<'a> FUNC_IN_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FUNC_IN_INV_SEL` reader - set this bit to invert input signal. 1:invert. :not invert."]
-pub struct FUNC_IN_INV_SEL_R(crate::FieldReader<bool, bool>);
-impl FUNC_IN_INV_SEL_R {
+#[doc = "Field `IN_INV_SEL` reader - set this bit to invert input signal. 1:invert. :not invert."]
+pub struct IN_INV_SEL_R(crate::FieldReader<bool, bool>);
+impl IN_INV_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        FUNC_IN_INV_SEL_R(crate::FieldReader::new(bits))
+        IN_INV_SEL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for FUNC_IN_INV_SEL_R {
+impl core::ops::Deref for IN_INV_SEL_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `FUNC_IN_INV_SEL` writer - set this bit to invert input signal. 1:invert. :not invert."]
-pub struct FUNC_IN_INV_SEL_W<'a> {
+#[doc = "Field `IN_INV_SEL` writer - set this bit to invert input signal. 1:invert. :not invert."]
+pub struct IN_INV_SEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> FUNC_IN_INV_SEL_W<'a> {
+impl<'a> IN_INV_SEL_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -100,26 +100,26 @@ impl<'a> FUNC_IN_INV_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SIG_IN_SEL` reader - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
-pub struct SIG_IN_SEL_R(crate::FieldReader<bool, bool>);
-impl SIG_IN_SEL_R {
+#[doc = "Field `SEL` reader - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
+pub struct SEL_R(crate::FieldReader<bool, bool>);
+impl SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        SIG_IN_SEL_R(crate::FieldReader::new(bits))
+        SEL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for SIG_IN_SEL_R {
+impl core::ops::Deref for SEL_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SIG_IN_SEL` writer - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
-pub struct SIG_IN_SEL_W<'a> {
+#[doc = "Field `SEL` writer - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
+pub struct SEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> SIG_IN_SEL_W<'a> {
+impl<'a> SEL_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -141,36 +141,36 @@ impl R {
     #[doc = "Bits 0:4 - set this value: s=-53: connect GPIO\\[s\\]
 to this port. s=x38: set this port always high level. s=x3C: set this port always low level."]
     #[inline(always)]
-    pub fn func_in_sel(&self) -> FUNC_IN_SEL_R {
-        FUNC_IN_SEL_R::new((self.bits & 0x1f) as u8)
+    pub fn in_sel(&self) -> IN_SEL_R {
+        IN_SEL_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bit 5 - set this bit to invert input signal. 1:invert. :not invert."]
     #[inline(always)]
-    pub fn func_in_inv_sel(&self) -> FUNC_IN_INV_SEL_R {
-        FUNC_IN_INV_SEL_R::new(((self.bits >> 5) & 0x01) != 0)
+    pub fn in_inv_sel(&self) -> IN_INV_SEL_R {
+        IN_INV_SEL_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
     #[inline(always)]
-    pub fn sig_in_sel(&self) -> SIG_IN_SEL_R {
-        SIG_IN_SEL_R::new(((self.bits >> 6) & 0x01) != 0)
+    pub fn sel(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 6) & 0x01) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - set this value: s=-53: connect GPIO\\[s\\]
 to this port. s=x38: set this port always high level. s=x3C: set this port always low level."]
     #[inline(always)]
-    pub fn func_in_sel(&mut self) -> FUNC_IN_SEL_W {
-        FUNC_IN_SEL_W { w: self }
+    pub fn in_sel(&mut self) -> IN_SEL_W {
+        IN_SEL_W { w: self }
     }
     #[doc = "Bit 5 - set this bit to invert input signal. 1:invert. :not invert."]
     #[inline(always)]
-    pub fn func_in_inv_sel(&mut self) -> FUNC_IN_INV_SEL_W {
-        FUNC_IN_INV_SEL_W { w: self }
+    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W {
+        IN_INV_SEL_W { w: self }
     }
     #[doc = "Bit 6 - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
     #[inline(always)]
-    pub fn sig_in_sel(&mut self) -> SIG_IN_SEL_W {
-        SIG_IN_SEL_W { w: self }
+    pub fn sel(&mut self) -> SEL_W {
+        SEL_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
